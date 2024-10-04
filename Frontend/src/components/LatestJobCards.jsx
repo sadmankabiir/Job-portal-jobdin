@@ -7,7 +7,7 @@ const LatestJobCards = ({ job }) => {
   return (
     <div
       onClick={() => navigate(`/description/${job._id}`)}
-      className="p-5 rounded-md shadow-xl bg-white border border-gray-100 cursor-pointer"
+      className="p-4 md:p-5 rounded-md shadow-xl bg-white border border-gray-100 cursor-pointer transition-transform duration-200 hover:scale-105"
     >
       <div>
         <h1 className="font-medium text-lg">{job?.company?.name}</h1>
