@@ -108,8 +108,7 @@ const JobDescription = () => {
           <span className="pl-4 font-normal text-gray-800">
             {singleJob?.location}
           </span>
-        </h1>
-        <h1 className="font-bold my-1">
+          <h1 className="font-bold my-1">
             Requirements:{" "}
             <ul className="pl-8 list-disc font-normal text-gray-400">
               {Array.isArray(singleJob?.requirements)
