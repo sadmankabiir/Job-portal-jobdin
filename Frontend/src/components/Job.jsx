@@ -17,7 +17,7 @@ const Job = ({ job }) => {
   };
 
   return (
-    <div className="p-5 rounded-md shadow-xl bg-white border border-gray-100">
+    <div className="p-4 md:p-5 rounded-md shadow-xl bg-white border border-gray-100 cursor-pointer transition-transform duration-200 hover:scale-105">
       <div className="flex items-center justify-between">
         <p className="text-sm text-gray-500">
           {daysAgoFunction(job?.createdAt) === 0
