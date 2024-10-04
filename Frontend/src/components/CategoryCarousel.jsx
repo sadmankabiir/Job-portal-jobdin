@@ -14,37 +14,39 @@ import { setSearchedQuery } from "@/redux/jobSlice";
 const category = [
   "Frontend Developer",
   "Backend Developer",
-  "Data Science",
-  "Graphic Designer",
-  "FullStack Developer",
+  "DevOps Engineer",
+  "Java Developer",
+  "Python Developer",
+  "MERN Stack Developer",
 ];
 
 const CategoryCarousel = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const searchJobHandler = (query) => {
     dispatch(setSearchedQuery(query));
     navigate("/browse");
   };
 
   return (
-    <div>
-      <Carousel className="w-full max-w-xl mx-auto my-20">
+    <div className="px-4 md:px-0 bg-#020817"> {/* Dark background */}
+      <Carousel className="w-full max-w-xl mx-auto my-10 md:my-20">
         <CarouselContent>
           {category.map((cat, index) => (
-            <CarouselItem className="md:basis-1/2 lg-basis-1/3">
+            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg-basis-1/4">
               <Button
                 onClick={() => searchJobHandler(cat)}
                 variant="outline"
-                className="rounded-full"
+                className="rounded-full text-xs md:text-base text-gray border-gray-600 hover:bg-gray-800" 
               >
                 {cat}
               </Button>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="text-gray hover:text-gray-400" /> {/* White arrow with hover effect */}
+        <CarouselNext className="text-gray hover:text-gray-400" /> {/* White arrow with hover effect */}
       </Carousel>
     </div>
   );
