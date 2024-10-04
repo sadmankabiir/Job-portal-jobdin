@@ -110,7 +110,7 @@ const JobDescription = () => {
           </span>
           <h1 className="font-bold my-1">
             Requirements:{" "}
-            <ul className="pl-8 list-disc font-normal text-gray-400">
+            <ul className="pl-10 list-disc font-normal text-gray-800">
               {Array.isArray(singleJob?.requirements)
                 ? singleJob.requirements.map((requirement, index) => (
                     <li key={index}>{requirement}</li>
